@@ -170,8 +170,7 @@ export const ChartContainer = () => {
                         }
                     </div>
                 )}
-            {
-                displayQuestion ? "" :
+            
                     <div style={{ display: 'flex', marginBottom: '50px' }}>
                         <p style={{ position: 'relative', display: 'inline' }} className="becro">Date preluate de la <a href="https://prezenta.bec.ro" target="_blank" rel="noopener noreferrer">prezenta.bec.ro</a></p>
                         <Container style={{ display: 'flex', alignItems: 'left', justifyContent: 'flex-end', padding: '0px' }}>
@@ -179,7 +178,6 @@ export const ChartContainer = () => {
                             <Media src={code4RoGrey} />
                         </Container>
                     </div>
-            }
 
         </div>
     );
