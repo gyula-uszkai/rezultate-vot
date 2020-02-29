@@ -26,6 +26,7 @@ namespace ElectionResults.WebApi
                     builder.AddJsonFile("appsettings.json", true, true)
                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true,
                             reloadOnChange: true);
+
                     if (env.EnvironmentName == "Development")
                     {
                         builder.AddSystemsManager($"/{Consts.ParameterStoreName}-dev", new AWSOptions
