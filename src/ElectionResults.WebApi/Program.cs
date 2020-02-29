@@ -1,12 +1,10 @@
-using System;
-using System.Net.Http;
-using Amazon;
 using Amazon.Extensions.NETCore.Setup;
 using Amazon.Runtime;
 using ElectionResults.Core.Storage;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using System;
 
 namespace ElectionResults.WebApi
 {
@@ -23,6 +21,7 @@ namespace ElectionResults.WebApi
                 .ConfigureAppConfiguration((hostingContext, builder) =>
                 {
                     Console.WriteLine($"Env: {Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}");
+
                     var env = hostingContext.HostingEnvironment;
                     builder.AddJsonFile("appsettings.json", true, true)
                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true,
